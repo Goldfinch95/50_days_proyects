@@ -1,11 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Card from "@/components/Card";
-<<<<<<< HEAD
 // en data tenemos los valores de la ubicación del archivo y el nombre del campeón.
-=======
-
->>>>>>> ccf248400f3bf2e2c2d7cc968d447b4481b0dfa2
 const data = [
   {
     bgURL: "/Images/anivia.jpg",
@@ -28,10 +24,7 @@ const data = [
     name: "Sejuani",
   },
 ];
-<<<<<<< HEAD
-//se pasa la data al componente card
-=======
->>>>>>> ccf248400f3bf2e2c2d7cc968d447b4481b0dfa2
+//se pasa la data al componente card, cada d debe tener una key diferente.
 export default function Home() {
   return (
     <>
@@ -41,7 +34,7 @@ export default function Home() {
       <main className={styles.container}>
         <div className={styles.gallery}>
           {data.map((d) => (
-            <Card info={d} />
+            <Card key={d.name} info={d} />
           ))}
         </div>
       </main>
